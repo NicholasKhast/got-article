@@ -4,15 +4,15 @@ class ArticlesController < ApplicationController
    @articles = Article.all       
  end
  
- def create
+ def new
    @article = Article.new
  end
  
- def new
+ def create
    @article = Article.new(article_params)
    if @article.save
    flash[:notice] = "Article Successfully Created!"
-   redirect_to article_path
+   redirect_to article_path(@article)
    else
      render 'new'
    end
@@ -45,7 +45,8 @@ class ArticlesController < ApplicationController
  
  private
  def article_params
-   params.require(:articles).permit(:title, :description)
+   params.require(:article).permit(:title, :description)
+
  end
  
 end

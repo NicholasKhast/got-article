@@ -1,2 +1,16 @@
 <h1>Welcome to All Articles</h1>
 
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+
+<% @articles.each do |f| %>
+<tr>
+ <td><%= f.title %></td>
+ <td><%= f.description %></td>
+ </tr>
+<% end %>
+
+</table>
