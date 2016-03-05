@@ -1,1 +1,2 @@
-This is A Blog App
+This is a blog web application developed using ruby on rails.
+
