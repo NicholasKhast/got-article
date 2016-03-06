@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "Welcome to got-Article Blog #{@user.username}"
+      flash[:success] = "Welcome to got-Article Blog #{@user.username}"
       redirect_to user_path(@user)
     else
       render 'new'
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:notice] = "Your Account Was Successfully Updated #{@user.username}"
+      flash[:success] = "Your Account Was Successfully Updated #{@user.username}"
       redirect_to articles_path
     else
       render 'edit'
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "User And All Of The Articles Created By User Have Been Deleted"
+    flash[:success] = "User And All Of The Articles Created By User Have Been Deleted"
     redirect_to users_path
   end
   
