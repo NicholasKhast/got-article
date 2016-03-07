@@ -21,5 +21,7 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.app_generators.stylesheet_engine :less
+
   end
 end
