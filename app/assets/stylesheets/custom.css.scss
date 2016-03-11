@@ -8,7 +8,7 @@ $navbar-default-bg: #1a1a1a;
 
 html,body{
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -28,7 +28,7 @@ html,body{
     background-image: url('main.jpg'); 
     background-size:cover;
     background-position:center;
-    height:550px;
+    height:600px;
 }
 
 
@@ -67,10 +67,12 @@ html,body{
 
 }
 
-footer{
-    margin-top:55px;
-    padding-top:5px;
-    border-top:1px solid #8c8c8c;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #1a1a1a;
 }
 
 .button {
@@ -82,7 +84,7 @@ footer{
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 24px 2px;
+    margin: 30px 2px;
     cursor: pointer;
 }
 
@@ -92,4 +94,23 @@ footer{
     color:#F7F199;
     font-weight:bold;
 
+}
+
+.about h2{
+    padding-top:20px;
+    color:#1a1a1a;
+    text-align:center;
+    letter-spacing: -1px;
+    font-family:Lato;
+    font-weight: 500;
+    font-size: 250%;
+    
+}
+
+.about P{
+    padding-top:20px;
+    color:#1a1a1a;
+    text-align:center;
+    font-family:Lato;
+    font-size: 150%;
 }
