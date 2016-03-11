@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308202045) do
+ActiveRecord::Schema.define(version: 20160311073432) do
 
   create_table "articles", force: true do |t|
     t.string   "title",       limit: nil
@@ -26,9 +26,10 @@ ActiveRecord::Schema.define(version: 20160308202045) do
   end
 
   create_table "users", force: true do |t|
-    t.string "username",        limit: nil
-    t.string "email",           limit: nil
-    t.string "password_digest", limit: nil
+    t.string  "username",        limit: nil
+    t.string  "email",           limit: nil
+    t.string  "password_digest", limit: nil
+    t.boolean "admin",                       default: false
   end
 
 end
