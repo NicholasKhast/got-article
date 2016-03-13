@@ -14,6 +14,10 @@ html,body{
     overflow-x: hidden; 
 }
 
+body{
+    font-family:Lato;
+}
+
 .navbar{
     margin:0;
     font-family:Lato;
@@ -43,7 +47,7 @@ html,body{
     font-style: italic;
 }
 
-.Intro P{
+.Intro p{
     color:#1a1a1a;
     text-align:center;
     letter-spacing: -1px;
@@ -114,3 +118,25 @@ html,body{
     font-family:Lato;
     font-size: 150%;
 }
+
+.distance_from_top{
+    margin-top:80px;
+}
+
+#login{
+    
+    background-image: url('main.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:920px;
+    position: relative;
+
+}
+
+.lForm{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    }
