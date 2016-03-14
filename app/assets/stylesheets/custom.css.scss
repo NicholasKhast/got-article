@@ -140,3 +140,56 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
     }
+    
+.modal-content{
+    background-color:#1a1a1a;
+}
+#yellowColor{
+    color:#F7F199;
+    
+}
+
+.buttonmain{
+    color: #ffffff;
+    font-weight:bold;
+    background-color: #006dcc;
+        margin-left:-15px;
+
+}
+
+.buttonmain:hover{
+    background-color: #F7F199;
+    color:#1a1a1a;
+    font-weight:bold;
+    
+}
+
+.modal-header{
+    border-bottom: 1px solid #777777;
+}
+
+#signup{
+    
+    background-image: url('main.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:920px;
+    position: relative;
+
+}
+
+.buttonsign{
+    font-weight:bold;
+    color: #fff;
+    background-color: #5cb85c;
+    margin-left:-15px;
+   
+}
+
+.buttonsign:hover{
+    background-color: #F7F199;
+    color:#1a1a1a;
+    font-weight:bold;
+    
+}
