@@ -33,7 +33,7 @@ def show
 end
 private
 def category_params
-params.require(:category).permit(:name)
+params.require(:category).permit(:name, :avatar)
 end
 def require_admin
 if !logged_in? || (logged_in? and !current_user.admin?)

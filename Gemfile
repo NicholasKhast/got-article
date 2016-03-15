@@ -51,4 +51,7 @@ end
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 
+#paperclip for image upload
+gem "paperclip", "~> 4.3"
+
 
