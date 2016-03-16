@@ -226,3 +226,21 @@ width: auto !important;
 
 #content {
 	padding-bottom:50px; }
+
+#cat{
+    background-image: url('main.jpg'); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:920px;
+    position: relative;
+    
+}
+
+.dropdown-menu {
+    background-color: #1a1a1a;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #331a00;
+}
