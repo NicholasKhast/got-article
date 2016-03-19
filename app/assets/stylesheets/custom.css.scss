@@ -244,3 +244,7 @@ width: auto !important;
 .dropdown-menu li a:hover {
     background-color: #331a00;
 }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color:#F7F199;
+}
