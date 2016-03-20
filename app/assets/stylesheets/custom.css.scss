@@ -248,3 +248,17 @@ width: auto !important;
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
     color:#F7F199;
 }
+
+
+#photo_attachment_container {
+    position: relative;
+}
+
+#photo_attachment_container .wrapper {
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+

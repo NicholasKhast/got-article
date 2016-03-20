@@ -54,4 +54,9 @@ gem 'sass-rails', '>= 3.2'
 #paperclip for image upload
 gem "paperclip", "~> 4.3"
 
+#jasny gem for more styling
+gem 'jasny-bootstrap-rails'
+
+
+
 
