@@ -1,6 +1,5 @@
 <h1 align="center"><%= "Category: " + @category.name %></h1>
 <div align="center">
-    <%= image_tag @category.avatar.url(:thumb) %>
 
 <% if logged_in? and current_user.admin? %>
 <div class="row">

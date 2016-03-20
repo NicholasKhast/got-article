@@ -1,0 +1,19 @@
+<h1 align="center">Listing All Categories</h1>
+<div align="center">
+<%= will_paginate %>
+<% @categories.each do |category| %>
+<ul class="Collection">
+<div class="row">
+<div class="collection col-sm-4 col-xs-6">
+<%= image_tag category.avatar.url(:thumb), class:"content text-center" %>
+
+<li class="article-title">
+<%= link_to "#{category.name}", category_path(category) %>
+</li>
+<li><small><%= pluralize(category.articles.count, "article") %></small></li>
+</div>
+</div>
+</ul>
+<% end %>
+<%= will_paginate %>
+</div>
