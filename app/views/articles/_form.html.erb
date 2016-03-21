@@ -1,7 +1,9 @@
-<%= render 'shared/errors', obj: @article %>
+
 
 <div id="login">
+
   <div class="lForm">
+      <%= render 'shared/errors', obj: @article %>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -23,10 +25,13 @@
           </div>          
           <div class="modal-body">
             <div class="form-group">
-              <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
-                <% cb.label(class: "checkbox-inline input_checkbox", :id =>"yellowColor" ) {cb.check_box(class: "checkbox") + cb.text} %>
-              <% end %>
+             
+                <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                  <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(id: "checkbox") + cb.text} %>
+                <% end %>
+             
             </div>
+     
             <div class="form-group">
               <%= f.submit "Create", class: 'btn btn-lg buttonmain' %>
             </div>

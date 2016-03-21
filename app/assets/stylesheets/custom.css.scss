@@ -159,7 +159,11 @@ body{
 }
 
 .modal-header{
-    border-bottom: 1px solid #777777;
+    border-bottom: 1px solid #F7F199;
+}
+.modal-footer{
+    border-top: 1px solid #F7F199;
+
 }
 
 #signup{
@@ -354,3 +358,17 @@ width: auto !important;
     background-color: #331a00;
     border-color: #F7F199;
 }
+
+
+.radio-inline, .checkbox-inline{    color:#F7F199;
+}
+
+
+.checkbox-inline{    
+
+    padding-left:0;
+    padding-right:11px;
+    margin-left:5px;
+    margin-right:25px;
+
+   }
