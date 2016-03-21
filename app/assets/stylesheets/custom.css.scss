@@ -36,7 +36,7 @@ body{
 }
 
 
-.Intro h1{
+ h1{
     padding-top:100px;
     color:#1a1a1a;
     text-align:center;
@@ -115,6 +115,7 @@ body{
 .distance_from_top{
     margin-top:80px;
 }
+
 
 #login{
     
@@ -317,4 +318,14 @@ width: auto !important;
     transition: all .5s;
     border-width: 2px;
     border-radius: 20px;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+    display: block;
+    width: 100%;
+    
+}
+
+#collections{
+
 }
