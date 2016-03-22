@@ -1,13 +1,26 @@
-<div class="distance_from_top">
-  <div class="distance_from_top">
-    <h1 align="center">Listing all articles</h1>
-  <div align="center">
-  <%= will_paginate %>
+<div class="wrap">
+  <div class="floatleft">
+    <div id="in" class="col-md-12">
+      <header>
+        <div class="content text-center wow distance_from_top">
+          <h1>ALL ARTICLES</h1>
+          <p style="margin-top:60px;">
+            <% if logged_in? %>
+              <%=link_to "New Article", new_article_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+            <% end %>
+            <%=link_to "Home", root_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "Categories", categories_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+          </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="floatright">
+    <div style="margin-top:60px;">
+      <div class="center">
+        <h2>ARTICLES</h2>
+        <%= will_paginate %>
+        
+  </div><%= render 'article', obj: @articles %>
 </div>
 
-<%= render 'article', obj: @articles %>
-<div align="center">
-  <%= will_paginate %>
-</div>
-</div>
-</div>
