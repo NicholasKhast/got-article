@@ -378,15 +378,14 @@ width: 100%;
 
 .floatleft, .floatright {
     float:left;
-    width: 25%;
-    background-color: #ccc;
+    width: 35%;
+    
     height:99vh;
     overflow:hidden;
 }
 
 .floatright {
-    background-color: #00ff00;
-    width: 75%;
+    width: 65%;
 }
    .floatleft{
     background-image: url('main.jpg'); 
@@ -401,3 +400,50 @@ width: 100%;
 .btn-artp:hover{ color: #F7F199;
     background-color: #331a00;
     border-color: #F7F199;}
+.post, .contact {
+  border-bottom: 2px solid #F5F5F5;
+  padding: 30px 20px 10px;
+}
+.post.single {
+  padding: 30px 0 10px;
+}
+
+.post:last-child,
+.contact:last-child {
+  border-bottom: 0px
+}
+
+.post .title {
+  color: #222;
+  font-size: 1.8em;
+  margin: 0 0 0.2em;
+}
+
+.post.single .title {
+  font-size: 36px;
+}
+.post.single header {
+  margin-bottom: 30px;
+}
+
+.post .title a {
+  color: #222;
+}
+
+.post .description {
+  color: #344151;
+  font-size: 1.15em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5em;
+}
+
+.post .meta {
+  color: #999;
+  font-size: 96%;
+}
+
+.post.single,
+.post.featured {
+  font-size: 1.2em;
+}
