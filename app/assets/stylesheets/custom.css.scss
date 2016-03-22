@@ -342,10 +342,7 @@ width: auto !important;
     font-style: italic;
 }
 
-#collections{    background-image: url('main.jpg'); 
-    background-size:cover;
-    background-position:center;
-    height:auto;}
+
     
 .btn-default {
     color: #F7F199;
@@ -372,3 +369,35 @@ width: auto !important;
     margin-right:25px;
 
    }
+   
+
+.wrap {
+width: 100%;
+
+}
+
+.floatleft, .floatright {
+    float:left;
+    width: 25%;
+    background-color: #ccc;
+    height:99vh;
+    overflow:hidden;
+}
+
+.floatright {
+    background-color: #00ff00;
+    width: 75%;
+}
+   .floatleft{
+    background-image: url('main.jpg'); 
+    background-size:cover;
+    background-position:center;
+    }
+    
+.btn-artp{ color: #322806;
+    background-color: transparent;
+    border-color: #322806;}
+    
+.btn-artp:hover{ color: #F7F199;
+    background-color: #331a00;
+    border-color: #F7F199;}
