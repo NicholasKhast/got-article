@@ -8,13 +8,13 @@
           <h4 align="center">Welcome to <%= @user.username %>'s page</h4>
           <p>
             <% if logged_in? && current_user == @user %>
-              <%=link_to "New Article", new_article_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+              <%=link_to "NEW ARTICLE", new_article_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
             <% end %>
-            <%=link_to "All Articles", articles_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
-            <%=link_to "Categories", categories_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "ALL ARTICLES", articles_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "CATEGORIES", categories_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
 
           </p>
-          <p><%=link_to "Home", root_path, {:class => "btn btn-outline btn-artp btn-lg"} %></p>
+          <p><%=link_to "HOME", root_path, {:class => "btn btn-outline btn-artp btn-lg"} %></p>
         </div>
       </header>
     </div>
