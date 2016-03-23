@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160322060108) do
+ActiveRecord::Schema.define(version: 20160323131453) do
 
   create_table "article_categories", force: true do |t|
     t.integer "article_id"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20160322060108) do
   end
 
   create_table "articles", force: true do |t|
-    t.string   "title",               limit: nil
+    t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -32,18 +32,19 @@ ActiveRecord::Schema.define(version: 20160322060108) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.datetime "created_at"
   end
 
   create_table "users", force: true do |t|
-    t.string  "username",        limit: nil
-    t.string  "email",           limit: nil
-    t.string  "password_digest", limit: nil
-    t.boolean "admin",                       default: false
+    t.string  "username"
+    t.string  "email"
+    t.string  "password_digest"
+    t.boolean "admin",           default: false
   end
 
 end

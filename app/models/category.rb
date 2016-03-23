@@ -6,7 +6,7 @@ class Category < ActiveRecord::Base
   validates :name, presence: true, length:{ minimum: 3, maximum: 25}
   validates_uniqueness_of :name
   
-  has_attached_file :avatar, styles: { medium: "270x179>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :avatar, styles: { medium: "270x179>", thumb: "100x100>" }, default_url: "Category_Missing.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   
 end

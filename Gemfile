@@ -38,6 +38,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+  gem 'byebug'
 
 group :development, :test do
   gem 'sqlite3'

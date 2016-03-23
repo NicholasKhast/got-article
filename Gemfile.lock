@@ -37,6 +37,7 @@ GEM
     bootstrap-will_paginate (0.0.10)
       will_paginate
     builder (3.2.2)
+    byebug (8.2.2)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.8)
@@ -131,9 +132,8 @@ GEM
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
+    uglifier (3.0.0)
+      execjs (>= 0.3.0, < 3)
     will_paginate (3.0.7)
 
 PLATFORMS
@@ -143,6 +143,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   bootstrap-will_paginate (= 0.0.10)
+  byebug
   coffee-rails (~> 4.0.0)
   jasny-bootstrap-rails
   jbuilder (~> 2.0)
