@@ -387,7 +387,7 @@ width: 100%;
 .floatright {
     width: 65%;
 }
-   .floatleft{
+   .floatleftPic{
     background-image: url('main.jpg'); 
     background-size:cover;
     background-position:center;
@@ -400,6 +400,7 @@ width: 100%;
 .btn-artp:hover{ color: #F7F199;
     background-color: #331a00;
     border-color: #F7F199;}
+    
 .post, .contact {
   border-bottom: 2px solid #F5F5F5;
   padding: 30px 20px 10px;

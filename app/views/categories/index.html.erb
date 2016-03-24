@@ -1,16 +1,16 @@
 <div class="wrap">
   <div role="tabpanel" class="tab-pane wow" id="collections">
-  <div class="floatleft">
+  <div class="floatleft floatleftPic">
     <div id="in" class="col-md-12">
       <header>
         <div class="content text-center wow distance_from_top">
           <h1 class="center">CATEGORIES</h1>
           <p style="margin-top:60px;">
             <% if logged_in? and current_user.admin? %>
-              <%=link_to "NEW CATEGORY", new_category_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+              <%=link_to "NEW CATEGORY", new_category_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
             <% end %>
-            <%=link_to "ARTICLES", articles_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
-            <%=link_to "HOME", root_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
 
           </p>
           

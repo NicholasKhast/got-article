@@ -1,14 +1,30 @@
-<h1 align="center"><%= "Category: " + @category.name %></h1>
-<div align="center">
+<div class="wrap">
+  <div class="floatleft" style="background-image: url('<%= @category.avatar.url %>'); 
+    background-size:cover;
+    background-position:center;">
+    
+    <div class="col-md-12">
+      <header>
+        <div class="content text-center wow distance_from_top">
+          
+          <h1 id="yellowColor" style="text-transform: uppercase;"><%= @category.name %></h1>
+          <p style="margin-top:60px;">
+            <% if logged_in? %>
+              <%=link_to "EDIT CATEGORY", edit_category_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
+            <% end %>
+            <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
+            <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
+          </p>
+        </div>
+      </header>
+    </div>
+  </div>
+  
+  <div class="floatright">
+    <div style="margin-top:40px;">
+      <div class="center" >
+        <%= will_paginate @category_articles %>
+        
+  </div><div style="margin-top:-50px; padding-bottom:50px;"><%= render 'articles/article', obj: @category_articles %></div>
+</div>
 
-<% if logged_in? and current_user.admin? %>
-<div class="row">
-<span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %></span>
-</div>
-<% end %>
-<%= will_paginate @category_articles %>
-</div>
-<%= render 'articles/article', obj: @category_articles %>
-<div align="center">
-<%= will_paginate @category_articles %>
-</div>
