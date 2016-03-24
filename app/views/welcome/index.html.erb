@@ -2,9 +2,11 @@
 <div class="Intro">
   <h1>"IF YOU CAN DREAM IT YOU CAN DO IT"</h1>
   <p>WALT  DISNEY</p>
+  <% if !logged_in? %>
   <div class="center">
     <%= link_to "GET STARTED", login_path, class:"button"%>
   </div>
+  <% end %>
 </div>
 <div class="about">
   <div class="container">
