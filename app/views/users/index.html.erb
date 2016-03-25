@@ -1,27 +1,44 @@
-<div id="content">
-  <div class="distance_from_top">
-    <h1 align="center">USERS</h1>
-    <div align="center">
-      <%= will_paginate %>
-      <% @users.each do |user| %>
-        <ul class="listing">
-          <div class="row">
-            <div class="well col-md-4 col-md-offset-4">
-              <li><%= link_to gravatar_for(user), user_path(user) %></li>
-              <li class="article-title">
-                <%= link_to user.username, user_path(user) %>
-              </li>
-              <li><small><%= pluralize(user.articles.count, "article") if user.articles %></small></li>
-              <% if logged_in? and current_user.admin? %>
-                <li><%= link_to "Delete this user", user_path(user), method: :delete,
-                  data: { confirm: "Are you sure you want to delete the user and all their articles?" } %>
-                </li>
-              <% end %>
-            </div>
+<div class="wrap">
+  <div role="tabpanel" class="tab-pane wow" id="collections">
+    <div class="floatleft floatleftPic">
+      <div id="in" class="col-md-12">
+        <header>
+          <div class="content text-center wow distance_from_top">
+            <h1 class="center">USERS</h1>
+            <p style="margin-top:60px;">
+              <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+              <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+            </p>
           </div>
-        </ul>
-      <% end %>
-      <%= will_paginate %>
+        </header>
+      </div>
+    </div>
+    <div class="floatright">
+      <div style="margin-top:40px;">
+        <div class="center">
+          <%= will_paginate %>
+        </div>
+        <section class="collections" style="margin-top:-30px;">
+          <div class="row">
+            <% @users.each do |user| %>
+              <div class="collection col-sm-4 col-xs-6">
+                <%= link_to user_path(user), class:"content text-center" do %>
+                  <%= image_tag ("user-background5.jpg"), class: "img-responsive" %>
+                  <div class="caption">
+                    <div style="margin-bottom:40px"><%= gravatar_for(user)%></div>
+                    <h3 id="yellowColor", style="text-transform: uppercase;"><%= "#{user.username}" %></h3>
+                    <span class="btn btn-lg btn-outline btn-default">VISIT</span>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </div>
+  
+
+
+

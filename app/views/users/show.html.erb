@@ -1,5 +1,5 @@
 <div class="wrap">
-  <div class="floatleft">
+  <div class="floatleft floatleftPic">
     <div id="in" class="col-md-12">
       <header>
         <div class="content text-center wow distance_from_top">
@@ -10,18 +10,17 @@
             <% if logged_in? && current_user == @user %>
               <%=link_to "NEW ARTICLE", new_article_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
             <% end %>
-            <%=link_to "ALL ARTICLES", articles_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
-            <%=link_to "CATEGORIES", categories_path, {:class => "btn btn-outline btn-artp btn-lg"} %>
-
+            <%=link_to "ALL ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+            <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
           </p>
-          <p><%=link_to "HOME", root_path, {:class => "btn btn-outline btn-artp btn-lg"} %></p>
+          <p><%=link_to "USERS", users_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %></p>
         </div>
       </header>
     </div>
   </div>
   <div class="floatright">
     <div style="margin-top:60px;">
-      <div class="center"><h2>ARTICLES</h2>
+      <div class="center">
         <%= will_paginate @user_articles %>
       </div>
       <%= render 'articles/article', obj: @user_articles %>
