@@ -21,15 +21,19 @@
         <section class="collections" style="margin-top:-30px;">
           <div class="row">
             <% @users.each do |user| %>
-              <div class="collection col-sm-4 col-xs-6">
+              <div class="collection col-xs-12 col-sm-6 col-md-4">
                 <%= link_to user_path(user), class:"content text-center" do %>
                   <%= image_tag ("user-background5.jpg"), class: "img-responsive" %>
                   <div class="caption">
-                    <div style="margin-bottom:40px"><%= gravatar_for(user)%></div>
+                    <span><%= gravatar_for(user) %></span>
                     <h3 id="yellowColor", style="text-transform: uppercase;"><%= "#{user.username}" %></h3>
-                    <span class="btn btn-lg btn-outline btn-default">VISIT</span>
+                    <h5 id="yellowColor"><%= pluralize(user.articles.count, "article") if user.articles %></h5>  
                   </div>
                 <% end %>
+                <% if logged_in? and current_user.admin? %>
+                  <%= link_to "Delete this user", user_path(user), method: :delete,
+                  data: { confirm: "Are you sure you want to delete the user and all their articles?" } %>
+              <% end %>
               </div>
             <% end %>
           </div>

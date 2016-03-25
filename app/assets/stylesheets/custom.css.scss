@@ -296,6 +296,7 @@ width: auto !important;
 
 #collections .collection .content .caption {
   width: 100%;
+  
   opacity: 1;
   position: absolute;
   color: #fff;
@@ -455,4 +456,15 @@ width: 100%;
     height:auto;
 }
 
- 
+ .btn-del {
+    color: red;
+    background-color: transparent;
+    border-color: red;
+}
+
+.btn-del:hover {
+    color: white;
+    background-color: red;
+    border-color: red;
+}
+
