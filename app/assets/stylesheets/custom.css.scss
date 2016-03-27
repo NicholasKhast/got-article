@@ -4,10 +4,75 @@ $navbar-default-bg: #1a1a1a;
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+ }
+
+
+
+
+
+
 
 
 html,body{
-    width: 100%;
+            width: 100%;
     height: 100%;
     margin:0 auto;
     padding: 0px;
@@ -37,6 +102,12 @@ body{
     height:600px;
 }
 
+#in{    background-image: url('main.jpg'); 
+    background-size:cover;
+    background-position:center;
+    height:100%;
+    
+}
 
  .Intro h1{
     padding-top:100px;
@@ -115,7 +186,7 @@ body{
 }
 
 .distance_from_top{
-    margin-top:80px;
+    margin-top:60px;
 }
 
 
@@ -210,10 +281,6 @@ li{
 width: auto !important;
 }
 
-#wrapper {
-	min-height:100%;
-	position:relative;
-}
 
 .footer {
     height: 50px;
@@ -426,6 +493,7 @@ width: 100%;
 .post.single header {
   margin-bottom: 30px;
 }
+
 
 .post .title a {
   color: #222;

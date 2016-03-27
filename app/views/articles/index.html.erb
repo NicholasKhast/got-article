@@ -1,25 +1,33 @@
-<div class="wrap">
-  <div class="floatleft floatleftPic">
-    <div id="in" class="col-md-12">
-      <header>
-        <div class="content text-center wow distance_from_top">
-          <h1>ARTICLES</h1>
-          <p style="margin-top:60px;">
-            <% if logged_in? %>
-              <%=link_to "NEW ARTICLE", new_article_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-            <% end %>
-            <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-            <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-          </p>
+<div id="wrapper">
+<!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <header class="sidebar-nav">
+      <div class="content text-center wow distance_from_top">
+        <h1>ARTICLES</h1>
+        <p style="margin-top:60px;">
+          <% if logged_in? %>
+            <%=link_to "NEW ARTICLE", new_article_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+          <% end %>
+          <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+          <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+        </p>
+      </div>
+    </header>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="center"><%= will_paginate %></div>
+            <%= render 'article', obj: @articles %>
         </div>
-      </header>
+      </div>
     </div>
   </div>
-  <div class="floatright">
-    <div style="margin-top:60px;">
-      <div class="center">
-        <%= will_paginate %>
-        
-  </div><%= render 'article', obj: @articles %>
+  <!-- /#page-content-wrapper -->
 </div>
+
+
 
