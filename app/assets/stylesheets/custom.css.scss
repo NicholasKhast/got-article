@@ -4,6 +4,11 @@ $navbar-default-bg: #1a1a1a;
 @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -14,8 +19,9 @@ $navbar-default-bg: #1a1a1a;
 
 
 #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
+
+    z-index: 100%;
+    position: absolute;
     left: 250px;
     width: 0;
     height: 100%;
@@ -33,14 +39,19 @@ $navbar-default-bg: #1a1a1a;
     width: 100%;
     position: absolute;
     padding: 15px;
+    
 }
 
 /* Sidebar Styles */
 
 .sidebar-nav {
+    background-image: url('main.jpg'); 
+    background-size:cover;
+    background-position:center;
+    height:100%;
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 450px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -53,7 +64,7 @@ $navbar-default-bg: #1a1a1a;
     }
 
     #sidebar-wrapper {
-        width: 250px;
+        width: 450px;
     }
 
 
