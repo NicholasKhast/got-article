@@ -9,6 +9,10 @@ $navbar-default-bg: #1a1a1a;
     margin-bottom: 25px;
 }
 
+a:link { 
+    text-decoration:none; 
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -20,7 +24,7 @@ $navbar-default-bg: #1a1a1a;
 
 #sidebar-wrapper {
 
-    z-index: 100%;
+    
     position: absolute;
     left: 250px;
     width: 0;
