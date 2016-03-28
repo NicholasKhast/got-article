@@ -5,6 +5,12 @@ $navbar-default-bg: #1a1a1a;
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
 
+
+.btn-danger{
+    color: #d9534f;
+}
+
+
 .portfolio-item {
     margin-bottom: 25px;
 }
@@ -14,6 +20,8 @@ a:link {
 }
 
 #wrapperRR {
+    display:block;
+    
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -77,10 +85,9 @@ a:link {
 
     #page-content-wrapperRR {
         top:10px;
-        left:525px;
         width:65%;
         position: relative;
-        
+        margin-bottom:150px;
     }
 
  }

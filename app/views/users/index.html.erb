@@ -1,48 +1,50 @@
-<div class="wrap">
-  <div role="tabpanel" class="tab-pane wow" id="collections">
-    <div class="floatleft floatleftPic">
-      <div id="in" class="col-md-12">
-        <header>
-          <div class="content text-center wow distance_from_top">
-            <h1 class="center">USERS</h1>
-            <p style="margin-top:60px;">
-              <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-              <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-            </p>
-          </div>
-        </header>
+<div id="wrapperRR">
+  <div id="sidebar-wrapperRR">
+    <div class="sidebar-nav">
+      <div class="content text-center wow distance_from_top">
+        <h1>USERS</h1>
+        <p style="margin-top:60px;">
+          <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+          <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
+        </p>
       </div>
     </div>
-    <div class="floatright">
-      <div style="margin-top:40px;">
-        <div class="center">
-          <%= will_paginate %>
-        </div>
-        <section class="collections" style="margin-top:-30px;">
+  </div>
+  <div id="page-content-wrapperRR" style="float:right; margin-right:50px;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="center" style="padding-bottom:10px">
+            <%= will_paginate %>
+          </div>
           <div class="row">
             <% @users.each do |user| %>
-              <div class="collection col-xs-12 col-sm-6 col-md-4">
-                <%= link_to user_path(user), class:"content text-center" do %>
-                  <%= image_tag ("user-background5.jpg"), class: "img-responsive" %>
-                  <div class="caption">
-                    <span><%= gravatar_for(user) %></span>
-                    <h3 id="yellowColor", style="text-transform: uppercase;"><%= "#{user.username}" %></h3>
-                    <h5 id="yellowColor"><%= pluralize(user.articles.count, "article") if user.articles %></h5>  
-                  </div>
-                <% end %>
-                <% if logged_in? and current_user.admin? %>
-                  <%= link_to "Delete this user", user_path(user), method: :delete,
-                  data: { confirm: "Are you sure you want to delete the user and all their articles?" } %>
-              <% end %>
+              <div class="col-sm-6 col-md-4 portfolio-item thumbnail">
+                <%= link_to user_path(user) do%>
+                  <%= image_tag ('user-background5.jpg') %>
+                  <h3 class="text-center">
+                    <%= user.username %>
+                  </h3>
+                  <p class="text-center">
+                    <span class="btn btn-outline btn-primary btn-lg"><%= pluralize(user.articles.count, "Article") %></span>
+                  </p>
+                  <p class="text-center">
+                    <% if logged_in? and current_user.admin? %>
+                      <%= link_to "DELETE", user_path(user), method: :delete,  data: { confirm: "Are you sure you want to delete the user?"}, :class => "btn btn-outline btn-danger btn-lg" %>
+                    <% end %>
+                  </p>
+                <% end %>    
               </div>
             <% end %>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   </div>
 </div>
-  
+
+
+
 
 
 

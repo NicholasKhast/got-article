@@ -1,5 +1,4 @@
 <div id="wrapperRR">
-<!-- Sidebar -->
   <div id="sidebar-wrapperRR">
     <div class="sidebar-nav">
       <div class="content text-center wow distance_from_top">
@@ -16,40 +15,37 @@
       </div>
     </div>
   </div>
-  <!-- /#sidebar-wrapper -->
-  <!-- Page Content -->
-  <div id="page-content-wrapperRR">
+  <div id="page-content-wrapperRR" style="float:right; margin-right:50px;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
           <div class="center" style="padding-bottom:10px">
             <%= will_paginate %>
           </div>
-<div class="row">
-  <% @categories.each do |category| %>
-    <div class="col-sm-6 col-md-4 portfolio-item thumbnail">
-      <%= link_to category_path(category) do%>
-        <%= image_tag (category.avatar.url) %>
-        <h3 class="text-center">
-          <%= category.name %>
-        </h3>
-        <p class="text-center">
-          <span class="btn btn-outline btn-primary btn-lg"><%= pluralize(category.articles.count, "Article") %></span>
-        </p>
-        <p class="text-center">
-          <% if logged_in? and current_user.admin? %>
-            <%=link_to "EDIT CATEGORY", edit_category_path(category), {:style => "margin:5px;", :class => "btn btn-outline btn-warning btn-lg"} %>
-          <% end %>
-        </p>
-      <% end %>    
-    </div>
-  <% end %>
-</div>
+          <div class="row">
+            <% @categories.each do |category| %>
+              <div class="col-sm-6 col-md-4 portfolio-item thumbnail">
+                <%= link_to category_path(category) do%>
+                  <%= image_tag (category.avatar.url) %>
+                  <h3 class="text-center">
+                    <%= category.name %>
+                  </h3>
+                  <p class="text-center">
+                    <span class="btn btn-outline btn-primary btn-lg"><%= pluralize(category.articles.count, "Article") %></span>
+                  </p>
+                  <p class="text-center">
+                    <% if logged_in? and current_user.admin? %>
+                      <%=link_to "EDIT CATEGORY", edit_category_path(category), {:style => "margin:5px;", :class => "btn btn-outline btn-warning btn-lg"} %>
+                    <% end %>
+                  </p>
+                <% end %>    
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- /#page-content-wrapper -->
 </div>
 
 
