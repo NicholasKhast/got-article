@@ -1,35 +1,23 @@
-<div id="wrapper">
-<!-- Sidebar -->
-  <div id="sidebar-wrapper">
-    <div class="sidebar-nav" style="background-image: url('<%= @category.avatar.url %>'); 
+<div id="wrapperRRc">
+  <div id="sidebar-wrapperRRc">
+    <div class="sidebar-navc" style="background-image: url('<%= @category.avatar.url %>'); 
     background-size:cover;
     background-position:center;">
       <div class="content text-center wow distance_from_top">
-         <h1 id="yellowColor" style="text-transform: uppercase;"><%= @category.name %></h1>
-          <p style="margin-top:60px;">
-            <% if logged_in? %>
-              <%=link_to "EDIT CATEGORY", edit_category_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
-            <% end %>
-            <%=link_to "CATEGORIES", categories_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
-            <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-lg btn-outline btn-default"} %>
-          </p>
-          <p></p>
+        <h1 id="yellowColor" style="text-transform: uppercase;"><%= @category.name %></h1>
       </div>
     </div>
   </div>
-  <!-- /#sidebar-wrapper -->
-  <!-- Page Content -->
-  <div id="page-content-wrapper">
+  <div id="page-content-wrapperRRc" style="float:right; margin-right:80px;">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
           <div class="center"><%= will_paginate @category_articles %></div>
-            <%= render 'articles/article', obj: @category_articles %>
+            <div style="margin-top:20px"><%= render 'articles/article', obj: @category_articles %></div>
         </div>
       </div>
     </div>
   </div>
-  <!-- /#page-content-wrapper -->
 </div>
 
 

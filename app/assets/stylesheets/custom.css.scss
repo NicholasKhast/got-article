@@ -5,8 +5,78 @@ $navbar-default-bg: #1a1a1a;
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
 
+.sidebar-navc {
 
-.Logo{  }
+    height:100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#wrapperRRc {
+    display:block;
+    
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar-wrapperRRc {
+
+    
+    position: absolute;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#page-content-wrapperRRc {
+    width: 100%;
+    position: relative;
+    
+    
+     
+
+}
+
+
+
+@media(min-width:768px) {
+    #wrapperRRc {
+        padding-left: 250px;
+    }
+
+    #sidebar-wrapperRRc {
+        width: 40%;
+        
+    }
+
+
+    #page-content-wrapperRRc {
+        top:10px;
+        width:65%;
+        position: relative;
+        margin-bottom:150px;
+    }
+
+ }
+
+
+
+
 
 .btn-warning{
     background-color: transparent;
@@ -99,6 +169,7 @@ a:link {
     padding: 0;
     list-style: none;
 }
+
 
 
 @media(min-width:768px) {

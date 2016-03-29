@@ -3,15 +3,9 @@
     <div class="sidebar-nav">
       <div class="content text-center wow distance_from_top">
         <h1>CATEGORIES</h1>
-        <p style="margin-top:60px;">
-          <% if logged_in? and current_user.admin? %>
-            <%=link_to "NEW CATEGORY", new_category_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-          <% end %>
-        </p>
-        <p>
-          <%=link_to "ARTICLES", articles_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-          <%=link_to "HOME", root_path, {:style => "margin:5px;", :class => "btn btn-outline btn-artp btn-lg"} %>
-        </p>
+        <h2 style="margin-top:60px;">
+          Welcome To Categories Section
+        </h2>
       </div>
     </div>
   </div>
