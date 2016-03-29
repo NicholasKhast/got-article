@@ -31,7 +31,7 @@
                     <%= category.name %>
                   </h3>
                   <p class="text-center">
-                    <span class="btn btn-outline btn-primary btn-lg"><%= pluralize(category.articles.count, "Article") %></span>
+                    <span class="btn btn-outline btn-primary btn-lg" style="padding-left:42px; padding-right:42px"><%= pluralize(category.articles.count, "Article") %></span>
                   </p>
                   <p class="text-center">
                     <% if logged_in? and current_user.admin? %>
