@@ -1,13 +1,10 @@
-
-
 <div id="login">
-
   <div class="lForm">
       <%= render 'shared/errors', obj: @article %>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="text-center", id=yellowColor>New Article</h1>
+          <h1 class="text-center", id=yellowColor><%= (@article.new_record? ? "New Article" : "Edit Article") %></h1>
         </div>
         <%= form_for(@article, :html => {class: "form col-md-12 center-block", multipart: true, role: "form"}) do |f| %>
           <div class="form-group" style="padding-top:20px;">
@@ -21,19 +18,15 @@
           <div class="form-group">
             <%= f.label :picture, :id =>"yellowColor" %>
             <%= f.file_field :avatar %>
-
           </div>          
           <div class="modal-body">
             <div class="form-group">
-             
                 <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
                   <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(id: "checkbox") + cb.text} %>
                 <% end %>
-             
             </div>
-     
             <div class="form-group">
-              <%= f.submit "Create", class: 'btn btn-lg buttonmain' %>
+              <%= f.submit(@article.new_record? ? "Create" : "Update", class: 'btn btn-lg buttonmain') %>
             </div>
         <% end %>
         </div>

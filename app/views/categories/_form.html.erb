@@ -1,16 +1,15 @@
-<%= render 'shared/errors', obj: @category %>
-
-<div id="cat">
+<div id="login">
   <div class="lForm">
+      <%= render 'shared/errors', obj: @category %>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="text-center", id=yellowColor>New Category</h1>
+          <h1 class="text-center", id=yellowColor><%= (@category.new_record? ? "New Category" : "Edit Category") %></h1>
         </div>
         <%= form_for(@category, :html => {class: "form col-md-12 center-block", multipart: true, role: "form"}) do |f| %>
-          <div class="form-group" style="padding-top:20px;">
+          <<div class="form-group" style="padding-top:20px;">
              <%= f.label :name, :id =>"yellowColor" %>
-              <%= f.text_field :name, class: "form-control", placeholder: "Category's Name", autocomplete: "off" %>
+             <%= f.text_field :name, class: "form-control", placeholder: "Category's Name", autocomplete: "off" %>
           </div>
           <div class="form-group">
             <%= f.label :picture, :id =>"yellowColor" %>
@@ -18,12 +17,12 @@
           </div>
           <div class="modal-body">
             <div class="form-group">
-              <%= f.submit "Add Category", class: 'btn btn-lg buttonsign' %>
+              <%= f.submit(@category.new_record? ? "Create" : "Update", class: 'btn btn-lg buttonsign') %>
             </div>
         <% end %>
-          </div>
-        <div class="modal-footer"><%= link_to "Cancel Request And Return To Home", root_path, :id =>"yellowColor" %></div>
+        </div>
+        <div class="modal-footer"><%= link_to "Cancel request and return to articles listing", articles_path, :id =>"yellowColor" %></div>
       </div>
     </div>
   </div> 
-</div>
+</div> 
