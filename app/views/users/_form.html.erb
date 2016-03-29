@@ -7,7 +7,7 @@
         <div class="modal-header">
           <h1 class="text-center", id=yellowColor>SignUp</h1>
         </div>
-        <%= form_for(@user, :html => {class: "form col-md-12 center-block", role: "form"}) do |f| %>
+        <%= form_for(@user, :html => {class: "form col-md-12 center-block", multipart: true, role: "form"}) do |f| %>
           <div class="form-group" style="padding-top:20px;">
             <%= f.label :username, :id =>"yellowColor" %>
             <%= f.text_field :username, class: "form-control", placeholder: "Enter Username", autocomplete: "off" %>
@@ -19,6 +19,10 @@
           <div class="form-group">
             <%= f.label :password, :id =>"yellowColor" %>
             <%= f.password_field :password, class: "form-control", placeholder: "Enter Password", autocomplete: "off" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :picture, :id =>"yellowColor" %>
+            <%= f.file_field :avatar %>
           </div>
           <div class="modal-body">
             <div class="form-group">

@@ -35,7 +35,7 @@
                   </p>
                   <p class="text-center">
                     <% if logged_in? and current_user.admin? %>
-                      <%=link_to "EDIT CATEGORY", edit_category_path(category), {:style => "margin:5px;", :class => "btn btn-outline btn-warning btn-lg"} %>
+                      <%=link_to "EDIT CATEGORY", edit_category_path(category), {:style => "margin:5px;", :class => "btn btn-warning btn-lg"} %>
                     <% end %>
                   </p>
                 <% end %>    

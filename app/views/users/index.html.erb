@@ -21,7 +21,10 @@
             <% @users.each do |user| %>
               <div class="col-sm-6 col-md-4 portfolio-item thumbnail">
                 <%= link_to user_path(user) do%>
-                  <%= image_tag ('user-background5.jpg') %>
+                
+
+                  <%= image_tag (user.avatar.url) %>
+                 
                   <h3 class="text-center">
                     <%= user.username %>
                   </h3>
@@ -30,7 +33,7 @@
                   </p>
                   <p class="text-center">
                     <% if logged_in? and current_user.admin? %>
-                      <%= link_to "DELETE", user_path(user), method: :delete,  data: { confirm: "Are you sure you want to delete the user?"}, :class => "btn btn-outline btn-danger btn-lg" %>
+                      <%= link_to "DELETE", user_path(user), method: :delete, data: { confirm: "Are you sure you want to delete the user?"}, :class => "btn btn-danger btn-lg" %>
                     <% end %>
                   </p>
                 <% end %>    
