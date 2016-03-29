@@ -1,8 +1,5 @@
 <div id="content"><%= image_tag @article.avatar.url, :style => "height:500px; width:100%" %></div>
-<header class="parallax-window" data-parallax="scroll" data-image-src="" data-speed="0.8"></header>
-
 <div id="content" class="container">
-  
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <section class="post single wow fadeIn">
@@ -17,8 +14,7 @@
         </header>
         <div class="description">
           <p>
-           <%= simple_format(@article.description) %>
-           
+            <%= simple_format(@article.description) %>
           </p>
         </div>
       </section>

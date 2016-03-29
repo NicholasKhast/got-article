@@ -5,6 +5,24 @@ $navbar-default-bg: #1a1a1a;
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
 
 
+
+
+.header {
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('main.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.about {
+    padding: 50px 0;
+}
+
 .sidebar-navc {
 
     height:100%;
@@ -294,7 +312,6 @@ body{
 }
 
 .about h2{
-    padding-top:20px;
     color:#1a1a1a;
     text-align:center;
     letter-spacing: -1px;
@@ -304,10 +321,16 @@ body{
     
 }
 
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .about P{
     padding-top:20px;
     color:#1a1a1a;
-    text-align:center;
+    
     font-family:Lato;
     font-size: 150%;
 }
