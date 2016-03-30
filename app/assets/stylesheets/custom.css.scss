@@ -226,7 +226,7 @@ html,body{
     margin:0 auto;
     padding: 0px;
     min-height:100% !important; 
-    overflow-x: hidden; 
+    overflow-x: hidden !important; 
 }
 
 body{
@@ -446,7 +446,9 @@ width: auto !important;
 }
 
 #content {
-	padding-bottom:50px; }
+	padding-bottom:50px; 
+    
+}
 
 #cat{
     background-image: url('main.jpg'); 
