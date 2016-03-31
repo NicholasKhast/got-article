@@ -1,9 +1,9 @@
 <div id="wrapperRR">
   <div id="sidebar-wrapperRR">
     <div class="sidebar-nav">
-      <div class="content text-center wow distance_from_top">
+      <div class="content text-center wow distance_from_top" style="padding-top:120px;">
         <%= image_tag (@user.avatar.url), class:"image-responsive user-profile-user-page" %>
-        <h1><%= @user.username %></h1>
+        <h1 style="font-weight:900;"><%= @user.username %></h1>
         <h4 align="center">Welcome to <%= @user.username %>'s page</h4>
         <p>
           <% if logged_in? && current_user == @user %>

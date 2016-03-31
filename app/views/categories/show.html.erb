@@ -4,7 +4,7 @@
     background-size:cover;
     background-position:center;">
       <div class="content text-center wow distance_from_top">
-        <h1 id="yellowColor" style="text-transform: uppercase;"><%= @category.name %></h1>
+        <h1 id="yellowColor" style="text-transform: uppercase; padding-top:120px;"><%= @category.name %></h1>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="center"><%= will_paginate @category_articles %></div>
-            <div style="padding-top:20px"><%= render 'articles/article', obj: @category_articles %></div>
+            <div style="padding-top:60px"><%= render 'articles/article', obj: @category_articles %></div>
         </div>
       </div>
     </div>
