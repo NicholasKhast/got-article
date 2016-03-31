@@ -1,2 +1,8 @@
-This is a blog web application developed using ruby on rails.
+This Is A Blog Web Application developed using ruby on rails.
+
+-Users can login/signup.
+-Edit their account information.
+-Create/Edit articles in different categories.
+-Admin user can edit/delete all articles, create/edit categories, delete users and their articles.
+
 
