@@ -16,14 +16,11 @@
           <div class="center" style="padding-bottom:10px">
             <%= will_paginate %>
           </div>
-          <div class="row">
+          <div class="row" style="margin-top:50px">
             <% @users.each do |user| %>
               <div class="col-sm-6 col-md-4 portfolio-item thumbnail">
                 <%= link_to user_path(user) do%>
-                
-
-                  <%= image_tag (user.avatar.url) %>
-                 
+                  <div class="content"><%= image_tag (user.avatar.url), class:"image-responsive user-profile-users-index" %></div>
                   <h3 class="text-center">
                     <%= user.username %>
                   </h3>
