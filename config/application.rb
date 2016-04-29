@@ -22,6 +22,8 @@ module Workspace
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.app_generators.stylesheet_engine :less
+    config.assets.initialize_on_precompile = false
+
 
   end
 end
