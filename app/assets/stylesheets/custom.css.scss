@@ -262,7 +262,8 @@ body{
 }
 
 .Intro{
-    background-image: url('main.jpg'); 
+    background: image-url('main.jpg');
+
     background-size:cover;
     background-position:center;
     height:670px;
@@ -365,7 +366,7 @@ body{
 
 #login{
     
-    background-image: url('main.jpg'); 
+    background: image-url('main.jpg');
     background-size:cover;
     background-position:center;
     height:100%;
@@ -473,7 +474,7 @@ width: auto !important;
 }
 
 #cat{
-    background-image: url('main.jpg'); 
+    background: image-url('main.jpg'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
