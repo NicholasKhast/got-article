@@ -21,11 +21,9 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.assets.precompile += %w( .svg .eot .woff .ttf .png .jpg .gif)
-    config.assets.initialize_on_precompile = false
-      config.serve_static_assets = true
-  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
-  config.assets.compile = true
+       config.assets.initialize_on_precompile = false
+
+
 
   end
 end
