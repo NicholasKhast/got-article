@@ -1,8 +1,16 @@
-This Is A Blog Web Application developed using ruby on rails.
+This Is A Blog Web Application 
 
--Users can login/signup.
--Edit their account information.
--Create/Edit articles in different categories.
--Admin user can edit/delete all articles, create/edit categories, delete users and their articles.
+-developed using ruby on rails.
+-Authentication system's made from scratch (without devise gem).
+-Bootstrap's been used for styling.
+-paperclip gem used for image upload
+
+-users can signup for a new account
+-edit their account
+-creat articles in different catefories (and have a picture for that post) and share it with others
+-eidt and delete their articles
+-admin user can delete other user and their posts
+-admin user can create different categories
+
 
 
