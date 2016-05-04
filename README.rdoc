@@ -10,8 +10,8 @@ This Is A Blog Web Application
 -paperclip gem used for image upload   
 
 
--users can signup for a new account 
 
+-users can signup for a new account 
 
 -edit their account    
 
