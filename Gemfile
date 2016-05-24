@@ -58,6 +58,7 @@ gem "paperclip", "~> 4.3"
 #jasny gem for more styling
 gem 'jasny-bootstrap-rails'
 
+gem 'aws-sdk', '< 2.0'
 
 
 
