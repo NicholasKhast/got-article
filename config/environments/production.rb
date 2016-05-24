@@ -16,7 +16,6 @@ Rails.application.configure do
   config.assets.compile = true
   config.serve_static_assets = true
     
-  
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
@@ -70,13 +69,24 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+  config.consider_all_requests_local       = true
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
+  
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+    config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+    bucket: ENV.fetch('S3_BUCKET'),
+    access_key_id: ENV.fetch('S3_ACCESS_KEY'),
+    secret_access_key: ENV.fetch('S3_SECRET_KEY'),
+    s3_region: ENV.fetch('S3_BUCKET_LOCATION'),
+  }
+}
+  
 end
