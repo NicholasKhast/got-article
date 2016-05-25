@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: { medium: "280x280>", thumb: "100x100>" }, 
   default_url: "user_missing.jpg",    
     :storage => :s3,
-    :path => ":attachment/:id/:style.:extension",
+    
     :bucket => "gotarticles"
     
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
